@@ -24,7 +24,7 @@ package com.ase.login.example;
 /**
  * <code>Set welcome message.</code>
  */
-public class HelloWorld extends ExampleSupport {
+public class HelloWorld extends Action {
 
     public String execute() throws Exception {
         setMessage(getText(MESSAGE));

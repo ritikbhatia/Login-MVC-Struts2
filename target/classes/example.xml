@@ -20,7 +20,7 @@
             <result type="redirectAction">Menu</result>
         </action>
 
-        <action name="*" class="com.ase.login.example.ExampleSupport">
+        <action name="*" class="com.ase.login.example.Action">
             <result>/WEB-INF/example/{1}.jsp</result>
         </action>
 

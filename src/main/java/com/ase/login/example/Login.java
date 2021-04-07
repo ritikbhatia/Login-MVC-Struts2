@@ -21,7 +21,7 @@
 
 package com.ase.login.example;
 
-public class Login extends ExampleSupport {
+public class Login extends Action {
 
     public String execute() throws Exception {
 
