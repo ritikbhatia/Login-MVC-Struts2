@@ -11,9 +11,9 @@
 
         <default-action-ref name="Login" />
 
-        <action name="HelloWorld" class="com.ase.login.example.HelloWorld">
+        <!-- <action name="HelloWorld" class="com.ase.login.example.HelloWorld">
             <result>/WEB-INF/example/HelloWorld.jsp</result>
-        </action>
+        </action> -->
 
         <action name="Login_*" method="{1}" class="com.ase.login.example.Login">
             <result name="input">/WEB-INF/example/Login.jsp</result>
