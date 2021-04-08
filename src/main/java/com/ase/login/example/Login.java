@@ -23,25 +23,21 @@ package com.ase.login.example;
 
 public class Login extends Action {
 
+    private String username;
+
+    private String password;
+
     public String execute() throws Exception {
 
-        if (isInvalid(getUsername()))
-            return INPUT;
-
-        if (isInvalid(getPassword()))
-            return INPUT;
-
         if (!LoginController.validate(getUsername(), getPassword()))
-            return INPUT;
+            return "error";
 
-        return SUCCESS;
+        return "success";
     }
 
     private boolean isInvalid(String value) {
         return (value == null || value.length() == 0);
     }
-
-    private String username;
 
     public String getUsername() {
         return username;
@@ -50,8 +46,6 @@ public class Login extends Action {
     public void setUsername(String username) {
         this.username = username;
     }
-
-    private String password;
 
     public String getPassword() {
         return password;

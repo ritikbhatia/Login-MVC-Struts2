@@ -1,12 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!-- <s:include value="Missing.jsp"/> -->
 <html>
-<head><title>Login successful</title></head>
+<head><title><s:text name="LoginSuccess.message"/></title></head>
 
 <body>
 <p>
-    <s:text name="LoginSuccess.message"/>
+    Hello, <s:property value="username"/>!
 </p>
 </body>
 </html>

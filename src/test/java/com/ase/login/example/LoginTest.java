@@ -46,7 +46,7 @@ public class LoginTest extends ConfigTest {
 
         // when the action required more input
         // used since form handling is done
-        assertResult(config, ActionSupport.INPUT, "/example/Login.jsp");
+        assertResult(config, ActionSupport.INPUT, "/example/login.jsp");
     }
 
     public void testLoginSubmit() throws Exception {

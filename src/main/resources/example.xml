@@ -9,7 +9,7 @@
 <struts>
     <package name="example" namespace="/example" extends="struts-default">
 
-        <default-action-ref name="Login" />
+        <default-action-ref name="HelloWorld" />
 
         <!-- <action name="HelloWorld" class="com.ase.login.example.HelloWorld">
             <result>/WEB-INF/example/HelloWorld.jsp</result>
@@ -17,11 +17,16 @@
 
         <action name="Login_*" method="{1}" class="com.ase.login.example.Login">
             <result name="input">/WEB-INF/example/Login.jsp</result>
-            <result type="redirectAction">Menu</result>
+            <result name="success">
+                Menu.jsp
+            </result>
+            <result name="error">
+                LoginError.jsp
+            </result>
         </action>
 
         <action name="*" class="com.ase.login.example.Action">
-            <result>/WEB-INF/example/{1}.jsp</result>
+            <result>/WEB-INF/example/HelloWorld.jsp</result>
         </action>
 
         <!-- Add additional "example" package actions here. -->
