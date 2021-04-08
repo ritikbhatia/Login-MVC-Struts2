@@ -3,9 +3,10 @@
 <html>
 
 <body>
-<s:property value="loginerror.message"/>
-
-<jsp:include page="Login.jsp"/>
+<p>
+    Invalid username/password
+</p>
+<jsp:include page="login.jsp"/>
 
 </body>
 </html>

@@ -2,14 +2,14 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Sign On</title>
+    <title>Login</title>
 </head>
 
 <body>
-<s:form action="LoginProcess">
+<s:form action="login">
     <s:textfield name="username" key="username"/>
     <s:password name="password" key="password" />
-    <s:submit value="Login"/>
+    <s:submit/>
 </s:form>
 </body>
 </html>

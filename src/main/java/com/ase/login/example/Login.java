@@ -29,9 +29,7 @@ public class Login extends Action {
 
     public String execute() throws Exception {
 
-        if (isInvalid(getUsername()) ||
-            isInvalid(getPassword()) ||
-            !LoginController.validate(getUsername(), getPassword()))
+        if (!LoginController.validate(getUsername(), getPassword()))
             return "error";
 
         return "success";
