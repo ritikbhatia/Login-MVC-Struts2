@@ -28,28 +28,33 @@ import java.util.Map;
 
 public class LoginTest extends ConfigTest {
 
-    public void FIXME_testLoginConfig() throws Exception {
-        ActionConfig config = assertClass("example", "Login_input", "example.Login");
-        assertResult(config, ActionSupport.SUCCESS, "Menu");
-        assertResult(config, ActionSupport.INPUT, "/example/Login.jsp");
-    }
-
-    public void testLoginSubmit() throws Exception {
-        Login login = container.inject(Login.class);
-        login.setUsername("username");
-        login.setPassword("password");
-        String result = login.execute();
-        assertSuccess(result);
-    }
-
     // Needs access to an envinronment that includes validators
     public void FIXME_testLoginSubmitInput() throws Exception {
         Login login = container.inject(Login.class);
         String result = login.execute();
         assertInput(result);
         Map errors = assertFieldErrors(login);
-        assertFieldError(errors,"username","Username is required.");
-        assertFieldError(errors,"password","Password is required.");
+        assertFieldError(errors, "username", "Username is required.");
+        assertFieldError(errors, "password", "Password is required.");
+    }
+
+    public void FIXME_testLoginConfig() throws Exception {
+        ActionConfig config = assertClass("example", "Login_input", "example.Login");
+
+        // test whether success returned
+        assertResult(config, ActionSupport.SUCCESS, "Menu");
+
+        // when the action required more input
+        // used since form handling is done
+        assertResult(config, ActionSupport.INPUT, "/example/Login.jsp");
+    }
+
+    public void testLoginSubmit() throws Exception {
+        Login login = container.inject(Login.class);
+        login.setUsername("ritik");
+        login.setPassword("ritik123");
+        String result = login.execute();
+        assertSuccess(result);
     }
 
 }

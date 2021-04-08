@@ -2,14 +2,16 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Sign On</title>
+    <title>Login - Group 51</title>
 </head>
 
 <body>
-<s:form action="Login">
-    <s:textfield key="username"/>
-    <s:password key="password" />
-    <s:submit/>
-</s:form>
+    <h2>Welcome to CZ3002 - Assignment 2 Login!</h2>
+    <h4>Please enter your credentials below:</h4>
+    <s:form action="Login">
+        <s:textfield key="username"/>
+        <s:password key="password" />
+        <s:submit/>
+    </s:form>
 </body>
 </html>
