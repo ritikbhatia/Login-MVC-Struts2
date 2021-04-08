@@ -5,7 +5,7 @@
 
 <body>
 <p>
-    Hello, <s:property value="username"/>!
+    Successful login
 </p>
 </body>
 </html>
