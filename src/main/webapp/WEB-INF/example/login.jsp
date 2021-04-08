@@ -2,7 +2,6 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-<<<<<<< HEAD:src/main/webapp/WEB-INF/example/Login.jsp
     <title>Login - Group 51</title>
 </head>
 
