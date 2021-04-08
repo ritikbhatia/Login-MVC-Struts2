@@ -11,7 +11,7 @@ public class LoginController {
         boolean status = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseproject", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "");
 
             PreparedStatement ps = con.prepareStatement("select * from users where username=? and password=?");
             ps.setString(1, username);

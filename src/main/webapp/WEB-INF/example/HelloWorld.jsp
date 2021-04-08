@@ -8,5 +8,8 @@
 <body>
 <h2><s:property value="message"/></h2>
 
+<h3>Commands</h3>
+<a href="<s:url action="Login"/>">Login</a>
+
 </body>
 </html>

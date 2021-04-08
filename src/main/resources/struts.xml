@@ -6,17 +6,36 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
     <constant name="struts.devMode" value="true"/>
 
-    <include file="example.xml"/>
-
     <package name="default" namespace="/" extends="struts-default">
 
-        <default-action-ref name="index"/>
+        <default-action-ref name="HelloWorld"/>
 
-        <action name="index">
-            <result type="redirectAction">
-                <param name="actionName">Login</param>
-                <param name="namespace">/example</param>
+        <action name="HelloWorld" class="com.ase.login.example.HelloWorld">
+            <result>/WEB-INF/example/HelloWorld.jsp</result>
+        </action>
+
+        <action name="Login">
+
+            <result>
+                /WEB-INF/example/Login.jsp
             </result>
+
+        </action>
+
+        <action name="LoginProcess" class="com.ase.login.example.Login">
+
+            <result name="success">
+                /WEB-INF/example/LoginSuccess.jsp
+            </result>
+
+            <result name="input">
+                /WEB-INF/example/Login.jsp
+            </result>
+
+            <result name="error">
+                /WEB-INF/example/LoginError.jsp
+            </result>
+
         </action>
 
     </package>
