@@ -10,11 +10,7 @@
 
         <default-action-ref name="index"/>
 
-        <action name="index" class="com.ase.login.example.HelloWorld">
-            <result>/WEB-INF/example/default.jsp</result>
-        </action>
-
-        <action name="login" class="com.ase.login.example.Login">
+        <action name="index" class="com.ase.login.example.Login">
 
             <result name="input">
                 /WEB-INF/example/login.jsp
