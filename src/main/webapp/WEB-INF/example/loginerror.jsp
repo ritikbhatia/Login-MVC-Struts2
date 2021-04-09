@@ -3,9 +3,9 @@
 <html>
 
 <body>
-<p>
+<div id = "main">
     Invalid username/password
-</p>
+</div>
 <jsp:include page="login.jsp"/>
 
 </body>
