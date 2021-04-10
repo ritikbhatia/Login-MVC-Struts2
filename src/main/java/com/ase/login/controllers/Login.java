@@ -25,27 +25,31 @@ import com.ase.login.models.*;
 
 public class Login extends Action {
 
-    // create a new login model
+    // create a new login model, to call functions
     LoginModel model = new LoginModel();
 
+    // execute function of conttroller
+    // this is invoked first
     public String execute() throws Exception {
 
+        // if username has not been set, prompt for input
         if (model.getUsername() == null)
             return "input";
 
-        if (!model.validate(model.getUsername(), model.getPassword()))
+        // if model identifies wrong credentials, return error
+        if (!LoginModel.validate(model.getUsername(), model.getPassword()))
             return "error";
 
         return "success";
     }
 
+    // control forwards input information to model, to change username
     public void setUsername(String username) {
         model.setUsername(username);
-        ;
     }
 
+    // control forwards input information to model, to change password
     public void setPassword(String password) {
         model.setPassword(password);
     }
-
 }

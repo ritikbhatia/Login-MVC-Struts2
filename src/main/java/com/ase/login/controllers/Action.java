@@ -23,8 +23,6 @@ package com.ase.login.controllers;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-/**
- * Base Action class for the Tutorial package.
- */
+// Base Action class
 public class Action extends ActionSupport {
 }

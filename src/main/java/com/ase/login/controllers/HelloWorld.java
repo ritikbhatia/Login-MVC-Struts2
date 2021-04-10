@@ -31,14 +31,10 @@ public class HelloWorld extends Action {
         return SUCCESS;
     }
 
-    /**
-     * Provide default valuie for Message property.
-     */
+    // Provide default valuie for Message property.
     public static final String MESSAGE = "HelloWorld.message";
 
-    /**
-     * Field for Message property.
-     */
+    // Field for Message property.
     private String message;
 
     /**
