@@ -63,11 +63,13 @@ public class LoginModel {
             // create connection object
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "root");
 
+            // template for mysql query to check for valid credential entered
             PreparedStatement ps = con.prepareStatement("select * from users where username=? and password=?");
 
             // query input uername and password
             ps.setString(1, username);
             ps.setString(2, userpass);
+            //execute query
             ResultSet rs = ps.executeQuery();
             status = rs.next();
         } catch (Exception e) {
