@@ -19,40 +19,12 @@
  * under the License.
  */
 
-package com.ase.login.example;
+package com.ase.login.controllers;
 
-public class Login extends Action {
+import com.opensymphony.xwork2.ActionSupport;
 
-    private String username;
-
-    private String password;
-
-    public String execute() throws Exception {
-
-        if (!LoginController.validate(getUsername(), getPassword()))
-            return "error";
-
-        return "success";
-    }
-
-    private boolean isInvalid(String value) {
-        return (value == null || value.length() == 0);
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+/**
+ * Base Action class for the Tutorial package.
+ */
+public class Action extends ActionSupport {
 }

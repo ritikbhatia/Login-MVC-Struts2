@@ -19,7 +19,7 @@
  * under the License.
  */
 
-package com.ase.login.example;
+package com.ase.login.loginTests;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.config.RuntimeConfiguration;
@@ -35,13 +35,11 @@ import org.apache.struts2.StrutsTestCase;
 public class ConfigTest extends StrutsTestCase {
 
     protected void assertSuccess(String result) throws Exception {
-        assertTrue("Expected a success result!",
-                ActionSupport.SUCCESS.equals(result));
+        assertTrue("Expected a success result!", ActionSupport.SUCCESS.equals(result));
     }
 
     protected void assertInput(String result) throws Exception {
-        assertTrue("Expected an input result!",
-                ActionSupport.INPUT.equals(result));
+        assertTrue("Expected an input result!", ActionSupport.INPUT.equals(result));
     }
 
     protected Map assertFieldErrors(ActionSupport action) throws Exception {
@@ -53,9 +51,9 @@ public class ConfigTest extends StrutsTestCase {
 
         List errors = (List) field_errors.get(field_name);
         assertNotNull("Expected errors for " + field_name, errors);
-        assertTrue("Expected errors for " + field_name, errors.size()>0);
+        assertTrue("Expected errors for " + field_name, errors.size() > 0);
         // TODO: Should be a loop
-        assertEquals(error_message,errors.get(0));
+        assertEquals(error_message, errors.get(0));
 
     }
 
@@ -70,8 +68,7 @@ public class ConfigTest extends StrutsTestCase {
         RuntimeConfiguration configuration = configurationManager.getConfiguration().getRuntimeConfiguration();
         ActionConfig config = configuration.getActionConfig(namespace, action_name);
         assertNotNull("Mssing action", config);
-        assertTrue("Wrong class name: [" + config.getClassName() + "]",
-                class_name.equals(config.getClassName()));
+        assertTrue("Wrong class name: [" + config.getClassName() + "]", class_name.equals(config.getClassName()));
         return config;
     }
 
@@ -86,8 +83,7 @@ public class ConfigTest extends StrutsTestCase {
         String value = (String) params.get("actionName");
         if (value == null)
             value = (String) params.get("location");
-        assertTrue("Wrong result value: [" + value + "]",
-                result_value.equals(value));
+        assertTrue("Wrong result value: [" + value + "]", result_value.equals(value));
     }
 
     public void testConfig() throws Exception {

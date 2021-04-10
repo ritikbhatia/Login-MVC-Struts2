@@ -19,12 +19,33 @@
  * under the License.
  */
 
-package com.ase.login.example;
+package com.ase.login.controllers;
 
-import com.opensymphony.xwork2.ActionSupport;
+import com.ase.login.models.*;
 
-/**
- * Base Action class for the Tutorial package.
- */
-public class Action extends ActionSupport {
+public class Login extends Action {
+
+    // create a new login model
+    LoginModel model = new LoginModel();
+
+    public String execute() throws Exception {
+
+        if (model.getUsername() == null)
+            return "input";
+
+        if (!model.validate(model.getUsername(), model.getPassword()))
+            return "error";
+
+        return "success";
+    }
+
+    public void setUsername(String username) {
+        model.setUsername(username);
+        ;
+    }
+
+    public void setPassword(String password) {
+        model.setPassword(password);
+    }
+
 }

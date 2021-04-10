@@ -19,7 +19,7 @@
  * under the License.
  */
 
-package com.ase.login.example;
+package com.ase.login.controllers;
 
 /**
  * <code>Set welcome message.</code>
