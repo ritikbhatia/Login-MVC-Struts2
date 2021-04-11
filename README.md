@@ -9,7 +9,7 @@ This project requires the following dependencies:
 - Maven
 - MySQL
 
-Also, the MySQL database needs to be pre-filled with a table and corresponding users. Execute the queries provided in the [mysqlScript.txt](mysqlScript.txt), in a MySQl shell, for the webapp to be working properly.
+Also, the MySQL database needs to be pre-filled with a table and corresponding users. Execute the queries provided in the [userDB.sql](userDB.sql), in a MySQl shell, for the webapp to be working properly.
 
 ## 2. Deployment
 
