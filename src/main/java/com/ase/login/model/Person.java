@@ -61,7 +61,7 @@ public class Person {
             // establish mysql connection
             Class.forName("com.mysql.jdbc.Driver");
             // create connection object
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "winson123");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "root");
 
             // template for mysql query to check for valid credential entered
             PreparedStatement ps = con.prepareStatement("select * from users where username=? and password=?");
