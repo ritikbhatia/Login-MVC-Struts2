@@ -19,14 +19,14 @@
  * under the License.
  */
 
-package com.ase.login.models;
+package com.ase.login.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class LoginModel {
+public class Person {
 
     // set class variables
     private String username;
@@ -61,7 +61,7 @@ public class LoginModel {
             // establish mysql connection
             Class.forName("com.mysql.jdbc.Driver");
             // create connection object
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "winson123");
 
             // template for mysql query to check for valid credential entered
             PreparedStatement ps = con.prepareStatement("select * from users where username=? and password=?");

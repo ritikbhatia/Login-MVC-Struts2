@@ -10,18 +10,18 @@
 
         <default-action-ref name="index"/>
 
-        <action name="index" class="com.ase.login.controllers.Login">
+        <action name="index" class="com.ase.login.action.Login">
 
             <result name="input">
-                /WEB-INF/views/login.jsp
+                /login.jsp
             </result>
 
             <result name="success">
-                /WEB-INF/views/loginsuccess.jsp
+                /loginsuccess.jsp
             </result>
 
             <result name="error">
-                /WEB-INF/views/loginerror.jsp
+                /loginerror.jsp
             </result>
 
         </action>

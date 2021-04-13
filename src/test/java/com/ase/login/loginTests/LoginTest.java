@@ -21,7 +21,7 @@
 
 package com.ase.login.loginTests;
 
-import com.ase.login.controllers.Login;
+import com.ase.login.action.Login;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 
