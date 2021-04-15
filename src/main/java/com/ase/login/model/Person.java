@@ -60,21 +60,30 @@ public class Person {
 
             // establish mysql connection
             Class.forName("com.mysql.jdbc.Driver");
+
             // create connection object
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "root");
+            Connection dbconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseProject", "root", "root");
 
             // template for mysql query to check for valid credential entered
-            PreparedStatement ps = con.prepareStatement("select * from users where username=? and password=?");
+            PreparedStatement prepStatement = dbconn
+                    .prepareStatement("select * from users where username=? and password=?");
 
             // query input uername and password
-            ps.setString(1, username);
-            ps.setString(2, userpass);
-            //execute query
-            ResultSet rs = ps.executeQuery();
-            status = rs.next();
+            prepStatement.setString(1, username);
+            prepStatement.setString(2, userpass);
+
+            // execute query
+            ResultSet result = prepStatement.executeQuery();
+
+            // retrieve the status of query execution
+            status = result.next();
+
         } catch (Exception e) {
+            // print error trace, if error occurs
             e.printStackTrace();
         }
+
+        // return the status boolean value
         return status;
     }
 }

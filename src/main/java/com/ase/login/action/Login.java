@@ -27,31 +27,31 @@ import com.opensymphony.xwork2.ActionSupport;
 
 // Base Action class
 public class Login extends ActionSupport {
-     // create a new login model, to call functions
-     Person model = new Person();
+    // create a new login model, to call functions
+    Person user = new Person();
 
-     // execute function of conttroller
-     // this is invoked first
-     public String execute() throws Exception {
- 
-         // if username has not been set, prompt for input
-         if (model.getUsername() == null)
-             return "input";
- 
-         // if model identifies wrong credentials, return error
-         if (!Person.validate(model.getUsername(), model.getPassword()))
-             return "error";
- 
-         return "success";
-     }
- 
-     // control forwards input information to model, to change username
-     public void setUsername(String username) {
-         model.setUsername(username);
-     }
- 
-     // control forwards input information to model, to change password
-     public void setPassword(String password) {
-         model.setPassword(password);
-     }
+    // execute function of conttroller
+    // this is invoked first
+    public String execute() throws Exception {
+
+        // if username has not been set, prompt for input
+        if (user.getUsername() == null || user.getUsername() == "")
+            return "input";
+
+        // if model identifies wrong credentials, return error
+        if (!Person.validate(user.getUsername(), user.getPassword()))
+            return "error";
+
+        return "success";
+    }
+
+    // control forwards input information to model, to change username
+    public void setUsername(String username) {
+        user.setUsername(username);
+    }
+
+    // control forwards input information to model, to change password
+    public void setPassword(String password) {
+        user.setPassword(password);
+    }
 }
