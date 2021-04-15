@@ -12,7 +12,7 @@ This project requires the following dependencies:
 
 Also, the MySQL database needs to be pre-filled with a table and corresponding users. Execute the queries provided in the [userDB.sql](userDB.sql), in a MySQl shell, for the webapp to be working properly.
 
-The MySQL script for database population can be found in the file named ** userDB.sql ** in the root directory
+The MySQL script for database population can be found in the file named **userDB.sql** in the root directory
 
 ## 2. Deployment
 
